@@ -3,6 +3,8 @@ from view import View
 from voto.voto import Libretto, Voto
 import flet as ft
 
+
+#CONTIENE UNA CLASSE CHE SI CHIAMA CONTROLLER, ORA IL CONTROLLER SA CHI E' IL VIEW E VICEVERSA
 class Controller:
     def __init__(self, v: View):
         self._view = v

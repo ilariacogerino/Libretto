@@ -2,15 +2,16 @@ import datetime
 
 import flet as ft
 
-
+#CONTIENE LA CLASSE VIEW
 class View:
     def __init__(self, page: ft.Page):
         self._txtOut = None
         self._btnIn = None
         self._txtIn = None
-        self._controller = None
-        self._page = page
+        self._controller = None #LO AGGIUNGO ALL'INIT PARI A NULLO
+        self._page = page #FUNZIONA DA COSTRUTTORE
 
+    # FUNZIONE PER LA CREAZIONE DELL'INTERFACCIA
     def loadInterface(self):
         """
         In questo metodo definiamo e carichiamo
@@ -65,6 +66,7 @@ class View:
         self._txtOut = ft.ListView(expand=True)
         self._page.add(row1, row2, row3, self._txtOut)
 
+    #FUNZIONE CHE PRENDE UN CONTROLLER E LO ASSEGNA ALLA VIEW
     def setController(self, c):
         self._controller = c
 
