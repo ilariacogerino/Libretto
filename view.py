@@ -19,7 +19,7 @@ class View:
         :return:
         """
         self._page.bgcolor = "white"
-        self._titolo = ft.Text("Libretto Voti", color="red", size=24)
+        self._titolo = ft.Text("Libretto Voti", color="red", size=24) #INSERISCO IL TITOLO
         self._student = ft.Text(value=self._controller.getStudent(), color="brown")
         row1 = ft.Row([self._titolo],
                       alignment=ft.MainAxisAlignment.CENTER)
@@ -40,13 +40,13 @@ class View:
             label="Voto",
             width=120
         )
-        self._fillDDVoto()
+        self._fillDDVoto() #SERVE PER INSERIRE LE OPZIONI ALL'INTERNO DEL MENU' A TENDINA
 
         self._dp = ft.DatePicker(
             first_date=datetime.datetime(2022, 1, 1),
             last_date=datetime.datetime(2026, 12, 31),
             on_change=lambda e: print(f"Giorno selezionato: {self._dp.value}"),
-            on_dismiss=lambda e: print("Data non selezionata")
+            on_dismiss=lambda e: print("Data non selezionata") #STAMPA IN CONSOLE NEL CASO IN CUI NON VENGA SELEZIONATA UNA DATA
         )
         self._btnCal = ft.ElevatedButton("Pick date",
                                          icon=ft.Icons.CALENDAR_MONTH,
@@ -65,6 +65,7 @@ class View:
 
         self._txtOut = ft.ListView(expand=True)
         self._page.add(row1, row2, row3, self._txtOut)
+        #L'ORDINE DI AGGIUNTA EQUIVALE ALL'ORDINE DI VIUSALIZZAZIONE
 
     #FUNZIONE CHE PRENDE UN CONTROLLER E LO ASSEGNA ALLA VIEW
     def setController(self, c):
