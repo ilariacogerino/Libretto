@@ -38,7 +38,7 @@ class Controller:
             return
 
         if punti == "30L":
-            self._model.append(Voto(nome, 30, f"{data.year}-{data.month}-{data.day}", True))
+            self._model.append(Voto(nome, 30, f"{data.year}-{data.month}-{data.day}", True)) #CONVERTO LA DATA, PERCHE' PRIMA E' UN OGGETTO DI TIPO DAYTIME
         else:
             self._model.append(Voto(nome, int(punti), f"{data.year}-{data.month}-{data.day}", False))
 
