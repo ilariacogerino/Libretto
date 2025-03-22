@@ -18,8 +18,8 @@ class Controller:
         #Raccoglie tutte le info per creare un nuovo voto
         #Crea un oggetto Voto
         #Fa append sul libretto
-        nome = self._view._txtInNome.value
-        if nome == "":
+        nome = self._view._txtInNome.value #PRENDE IL VALORE INSERITO DALL'UTENTE DALLA CLASSE VIEW
+        if nome == "": #EFFETTUO IL CONTROLLO PER VEDERE CHE IL CAMPO INSERITO NON SIA NULLO
             self._view._txtOut.controls.append(
                 ft.Text("Attenzione. Il campo nome non può essere vuoto", color="red"))
             self._view._page.update()
@@ -27,15 +27,13 @@ class Controller:
 
         punti = self._view._ddVoto.value
         if punti is None:
-            self._view._txtOut.controls.append(
-                ft.Text("Attenzione. Selezionare un voto.", color="red"))
+            self._view._txtOut.controls.append(ft.Text("Attenzione. Selezionare un voto.", color="red")) #COMANDO PER FAR APPARIRE SULL'INTERFACCIA IL TESTO DI ERRRORE
             self._view._page.update()
             return
 
         data = self._view._dp.value
         if data is None:
-            self._view._txtOut.controls.append(
-                ft.Text("Attenzione. Selezionare una data.", color="red"))
+            self._view._txtOut.controls.append(ft.Text("Attenzione. Selezionare una data.", color="red"))
             self._view._page.update()
             return
 
