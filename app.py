@@ -1,7 +1,7 @@
 import flet as ft
 
-from controller import Controller
-from view import View
+from UI.controller import Controller
+from UI.view import View
  #FILE CHE METTE IN COMUNICAZIONE VIEW, CONTROLLER, MODEL(VOTO)
  # NORMALMENTE QUESTO PRENDE IL NOME DI MAIN, NON APP
 
